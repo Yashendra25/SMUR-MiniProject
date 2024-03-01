@@ -29,9 +29,7 @@ Statistics Calculator is a web application that allows users to perform various 
 
 Contributions are welcome! If you have any suggestions, enhancements, or bug fixes, feel free to open an issue or create a pull request.
 
-## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## ScreenShot
 ![image](https://github.com/Yashendra25/SMUR-MiniProject/assets/100985842/3681ff44-cc06-471c-baeb-314dd2a8a7e5)
