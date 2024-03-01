@@ -1,0 +1,51 @@
+body {
+    margin: 0;
+    background: linear-gradient(135deg, #2980b9, #6dd5fa);
+    text-align: center;
+    color: #fff;
+    font-family: 'Roboto', sans-serif; /* Using Roboto font for Material Design */
+  }
+  
+  button {
+    cursor: pointer;
+    background-color: #4CAF50; /* Material Design color for success */
+    border: 3px solid #fff;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease; /* Adding smooth transition on hover */
+  }
+  
+  button:hover {
+    background-color: #45a049; /* Darker shade on hover */
+  }
+  
+  input {
+    background-color: rgba(255, 255, 255, 0.2); /* Transparent white */
+    color: #fff;
+    border: none;
+    border-bottom: 2px solid #fff; /* Bottom border for input */
+    padding: 10px;
+    margin: 10px;
+    font-size: 16px;
+    transition: border-bottom 0.3s ease; /* Adding smooth transition on focus */
+  }
+  
+  input:focus {
+    border-bottom: 2px solid #45a049; /* Change border color on focus */
+  }
+  
+  .bold {
+    font-weight: bold;
+  }
+  
+  .results {
+    background-color: rgba(255, 255, 255, 0.2); /* Transparent white */
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+  }
+  
+
+  
