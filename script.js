@@ -46,7 +46,7 @@ const getStandardDeviation = (array) => {
   return standardDeviation;
 }
 
-const calculate = () => {
+const calculateAndVisualize = () => {
   const value = document.querySelector("#numbers").value;
   const array = value.split(/,\s*/g);
   const numbers = array.map(el => Number(el)).filter(el => !isNaN(el));
@@ -64,4 +64,42 @@ const calculate = () => {
   document.querySelector("#range").textContent = range;
   document.querySelector("#variance").textContent = variance;
   document.querySelector("#standardDeviation").textContent = standardDeviation;
+
+  createOrUpdateChart("meanChart", "Mean", [mean], "Mean");
+  createOrUpdateChart("medianChart", "Median", [median], "Median");
+  createOrUpdateChart("modeChart", "Mode", mode ? mode.split(", ") : [], "Mode");
+  createOrUpdateChart("rangeChart", "Range", [range], "Range");
+  createOrUpdateChart("varianceChart", "Variance", [variance], "Variance");
+  createOrUpdateChart("standardDeviationChart", "Standard Deviation", [standardDeviation], "Standard Deviation");
 }
+
+const createOrUpdateChart = (chartId, title, data, xLabel) => {
+  let chart = document.getElementById(chartId);
+  if (chart) {
+    chart.parentNode.removeChild(chart);
+  }
+  
+  const div = document.createElement('div');
+  div.id = chartId;
+  div.style.width = '600px'; /* Set width of the chart */
+  div.style.height = '400px'; /* Set height of the chart */
+  document.querySelector(".chart-container").appendChild(div);
+
+  Plotly.newPlot(chartId, [{
+    x: [xLabel],
+    y: data,
+    type: 'bar',
+    marker: {
+      color: 'rgba(54, 162, 235, 0.6)'
+    }
+  }], {
+    title: title,
+    xaxis: {
+      title: xLabel
+    },
+    yaxis: {
+      title: 'Value'
+    }
+  });
+}
+

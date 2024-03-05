@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="styles.css" />
-    <script src="script.js"></script>
-    <title>Statistics Calculator</title>
-  </head>
-  <body>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="script.js"></script>
+  <title>Statistics Calculator</title>
+</head>
+<body>
+  <div class="container">
     <h1>Statistics Calculator</h1>
     <p>Enter a list of comma-separated numbers.</p>
-    <form onsubmit="calculate(); return false;">
+    <form onsubmit="calculateAndVisualize(); return false;">
       <label for="numbers">Numbers:</label>
       <input type="text" name="numbers" id="numbers" />
       <button type="submit">Calculate</button>
@@ -49,5 +51,9 @@
         Standard Deviation: <span id="standardDeviation"></span>
       </p>
     </div>
-  </body>
+  </div>
+  <div class="chart-container">
+    <!-- Charts will be dynamically added here -->
+  </div>
+</body>
 </html>
